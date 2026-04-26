@@ -1,0 +1,53 @@
+# --- Environment & Library ---
+# Mirip seperti node_modules, folder ini tidak boleh di-upload
+venv/
+env/
+.env
+bin/
+lib/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.installed.cfg
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Python Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# --- Machine Learning Specific ---
+# Abaikan folder dataset karena biasanya besar (masukkan dataset secara manual jika perlu)
+data/raw/
+data/processed/
+*.csv
+*.xlsx
+*.jsonl
+
+# Abaikan file model besar (agar tidak melebihi limit GitHub 100MB)
+*.pkl
+*.h5
+*.pth
+*.joblib
+*.onnx
+models/
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
