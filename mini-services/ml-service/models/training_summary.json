@@ -1,0 +1,73 @@
+{
+  "dataset": {
+    "total_rows": 5000,
+    "students": 211,
+    "majors": 12,
+    "courses": 52,
+    "mean_gp": 3.6042,
+    "split_ratio": "80/20 (by student)"
+  },
+  "model1_kmeans": {
+    "name": "K-Means Clustering",
+    "metrics": {
+      "silhouette": 0.3999,
+      "inertia": 311.92,
+      "cluster_sizes": [
+        58,
+        113,
+        37,
+        42,
+        33
+      ]
+    },
+    "description": "Unsupervised clustering pada statistik per mata kuliah"
+  },
+  "model2_logreg": {
+    "name": "Logistic Regression (Softmax)",
+    "metrics": {
+      "exact_accuracy": 0.4832,
+      "within1_step_accuracy": 0.7496,
+      "within2_step_accuracy": 0.9127,
+      "top3_accuracy": 0.8713,
+      "grade_order": [
+        "A",
+        "A-",
+        "B+",
+        "B",
+        "B-",
+        "C+",
+        "C",
+        "C-",
+        "D",
+        "E"
+      ],
+      "train_size": 3866,
+      "test_size": 1134
+    },
+    "description": "Multi-class softmax regression, 13 fitur, 10 kelas"
+  },
+  "model3_random_forest": {
+    "name": "Random Forest",
+    "metrics": {
+      "exact_accuracy": 0.4347,
+      "within1_step_accuracy": 0.7196,
+      "within2_step_accuracy": 0.8986,
+      "top3_accuracy": 0.8369,
+      "grade_order": [
+        "A",
+        "A-",
+        "B+",
+        "B",
+        "B-",
+        "C+",
+        "C",
+        "C-",
+        "D",
+        "E"
+      ],
+      "train_size": 3866,
+      "test_size": 1134
+    },
+    "description": "Random Forest, 100 trees, 13 fitur, 10 kelas"
+  }
+}
