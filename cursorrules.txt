@@ -1,0 +1,24 @@
+# .cursorrules — Cursor AI rules
+# Dibaca otomatis oleh Cursor editor saat membuka project ini.
+
+You are working on "Indeks Prestasi — GPA Optimizer ML", a Python ML project
+for predicting Indonesian university student grade combinations.
+
+## Architecture
+- Model 1: CourseDifficultyClusterer (K-Means) in src/models/model1_difficulty_clustering.py
+- Model 2: GradeOutcomePredictor (Random Forest) in src/models/model2_grade_predictor.py
+- All hyperparameters in configs/config.py — never hardcode constants
+- Indonesia dataset adapter in src/data/indonesia_adapter.py
+
+## Rules
+- Always import GRADE_POINTS from configs.config, never hardcode {"A": 4.0, ...}
+- Always use pathlib.Path for file paths, never raw strings
+- Grade scale: A(4.0) A-(3.7) B+(3.3) B(3.0) B-(2.7) C+(2.3) C(2.0) C-(1.7) D(1.0) E(0.0)
+- IPK delta output range: 0.01–0.50 (from IPK_DELTA in config)
+- Scenarios: santai(0) serius(1) keras(2) maksimal(3)
+- Indonesia dataset columns: jurusan→major, mata_kuliah→course_name, nilai→grade
+
+## Entry Points
+- Training: scripts/train_indonesia.py
+- Prediction: src/api/main.py
+- Test: tests/test_pipeline.py
